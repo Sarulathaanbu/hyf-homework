@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Payment</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img class="logo" src="logo.png" alt="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index2.html">Contact</a></li>
+          <li><a href="index3.html">Selection</a></li>
+          <li><a href="index4.html">Billing</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="heading">
+      <h1>Sign up to yourcustomtailor.com</h1>
+      <h2>Step 3/4 - Time to learn about your preferences?</h2>
+    </div>
+    <h3>Progress</h3>
+    <div class="progressbar bar-4">
+      <span style="width: 90%;"></span>
+    </div>
+    <p>Please fill in your payment data </p>
+    <form action="" method="get">
+      <div class="columnwrap">
+        <div class="col1">
+          <label for="card">Name on card</label>
+          <input type="text" class="text2" id="name" name="name" required>
+        </div>
+      </div>
+      <div class="columnwrap">
+        <div class="col1">
+          <label for="card" id="cardtype">Card type</label>
+          <select id="card" name="card" required>
+            <option value=""></option>
+            <option value="visa">VISA</option>
+            <option value="visa">CREDIT CARD</option>
+            <option value="visa">MASTER</option>
+            <option value="visa">AMEX</option>
+          </select><br>
+        </div>
+      </div>
+      <div class="columnwrap">
+        <div class="col1">
+          <label for="no">Credit card number</label>
+          <input type="text" class="text2" maxlength="16" pattern="[0-9]{16}" name="cardno" required>
+        </div>
+        <div class="col2">
+          <label for="name">Firstname</label>
+          <input type="text" class="text2" id="name" name="name" required>
+        </div>
+      </div>
+      <div class="columnwrap">
+        <div class="col1">
+          <label for="expmonth">Expiry Month</label>
+          <select id="month" name="month" required>
+            <option value=""></option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+        </div>
+        <div class="col2">
+          <label for="expyear">Expiry Year</label>
+          <input type="text" class="text2" maxlength="4" pattern="[0-9]{4}" name="expyear" required>
+        </div>
+      </div>
+      <div class="columnwrap">
+        <div class="col1">
+          <label for="cvv">CVV</label>
+          <input type="text" class="text2" maxlength="3" pattern="[0-9]{3}" name="cvv" required>
+        </div>
+      </div>
+      <input class="next" type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>
