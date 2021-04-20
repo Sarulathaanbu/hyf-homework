@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px 70px 50px 50px;
+  border: 10px solid #E3511D;
+}
+
+.container {
+  padding: 10px 20px 30px 20px;
+  background-color: white;
+  font-size: 23px;
+}
+
+/* header with logo and nav bar */
+.logo {
+  float: left;
+  height: 13%;
+  width: 13%;
+}
+
+nav {
+  float: right;
+  padding-left: 13%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 20px;
+  border: 2px darkred solid;
+  background-color: #E3511D;
+  margin: 3px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.heading {
+  margin-top: 13%;
+}
+
+/* Progress Bar */
+.progressbar {
+  background-color: #F3703A;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+.progressbar>span {
+  background-color: darkred;
+  height: 20px;
+  border-radius: 20px;
+  display: block;
+}
+
+.bar-1>span {
+  animation: bar1 4s;
+}
+
+.bar-2>span {
+  animation: bar2 4s;
+}
+
+.bar-3>span {
+  animation: bar3 4s;
+}
+
+.bar-4>span {
+  animation: bar4 4s;
+}
+
+@keyframes bar1 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 25%;
+  }
+}
+
+@keyframes bar2 {
+  0% {
+    width: 25%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes bar3 {
+  0% {
+    width: 50%;
+  }
+
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes bar4 {
+  0% {
+    width: 75%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+/* Progress Bar Ends */
+/* textbox */
+.text {
+  width: 60%;
+  padding: 15px;
+  margin: 10px 0 30px 40px;
+}
+
+/* Column seperation */
+.columnwrap {
+  display: flex;
+  font-weight: bold;
+}
+
+.col1 {
+  text-align: right;
+  width: 50%;
+  margin-left: -10px;
+}
+
+.col2 {
+  text-align: right;
+  width: 50%;
+  margin-left: -30px;
+}
+
+.columnwrap1 {
+  display: flex;
+}
+
+.col3 {
+  text-align: right;
+  width: 15%;
+}
+
+section h4 {
+  font-weight: bold;
+}
+
+section p {
+  font-size: 15px;
+  font-style: italic;
+}
+
+textarea {
+  width: 510%;
+  padding: 50px;
+  margin: -120% 0 0 130%;
+}
+
+#country {
+  width: 60%;
+  padding: 15px;
+  margin: 50px 0 30px 50px;
+}
+
+#chkbox {
+  width: 50px;
+  height: 50px;
+  margin: 30px 0 30px 40px;
+  background-color: white;
+}
+
+.shipping {
+  display: none;
+}
+
+/* checkbox checked index1a.html */
+input[type=checkbox]:checked~.shipping {
+  display: inline;
+}
+
+.shippinglable {
+  width: 90%;
+}
+
+/* next page button */
+.next {
+  margin: 10% 0 0 75%;
+  background-color: #E3511D;
+  height: 30%;
+  width: 25%;
+  text-align: center;
+  padding: 30px;
+  border: 2px darkred solid;
+  color: Black;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* css for index2.html */
+.text2 {
+  width: 40%;
+  padding: 15px;
+  margin: 10px 0 30px 40px;
+}
+
+.newswrap {
+  display: flex;
+  margin-left: 10%;
+  font-weight: bold;
+}
+
+.news {
+  flex-direction: column;
+  width: 10%;
+  margin-left: 1px;
+}
+
+/* css for index3.html */
+.selection {
+  display: flex;
+  font-weight: bold;
+}
+
+.left {
+  text-align: right;
+  width: 30%;
+}
+
+.right {
+  text-align: right;
+  width: 30%;
+}
+
+.checkbox {
+  zoom: 3.5;
+}
+
+.pics-in-row {
+  display: flex;
+  margin: 5% 0 0 10%;
+}
+
+img {
+  width: 70%;
+  height: 70%;
+}
+
+.img1 {
+  flex: 2.5;
+}
+
+.img2 {
+  flex: 2.5;
+}
+
+.img3 {
+  flex: 2.5;
+}
+
+.img4 {
+  flex: 2.5;
+}
+
+.options {
+  display: flex;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.options label {
+  width: 19%;
+}
+
+#checkbox {
+  zoom: 2;
+}
+
+/* css for index4.html */
+#card, #month {
+  width: 40%;
+  padding: 15px;
+  margin: 50px 0 30px 50px;
+}
+
+/* Media queries */
+@media screen and (max-width: 800px) {
+  .container {
+    width: 88%;
+    font-size: small;
+  }
+
+  .text, .text2 {
+    width: -webkit-fill-available;
+  }
+
+  select {
+    width: auto;
+  }
+
+  .next {
+    font-size: small;
+  }
+}
