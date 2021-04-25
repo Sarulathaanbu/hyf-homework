@@ -1,2 +1,4 @@
 Blue
 Pink
+red
+orange
