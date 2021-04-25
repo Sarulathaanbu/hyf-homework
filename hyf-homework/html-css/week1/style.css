@@ -1,0 +1,66 @@
+body {
+  margin: 15%;
+  margin-top: auto;
+  font-family: arial;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+}
+
+h1 {
+  color: #087F80;
+}
+
+hr {
+  color: #087F80;
+  border: solid;
+}
+
+.text {
+  float: left;
+  padding: 10px;
+  margin: 10px;
+}
+
+p {
+  text-align: left;
+  font-size: 20px;
+}
+
+.work {
+  line-height: 5px;
+}
+
+.edu {
+  line-height: 10px;
+}
+
+li {
+  font-size: 18px;
+}
+
+.list {
+  margin-top: 20px;
+  width: 1000px;
+  float: right;
+}
+
+.icon {
+  margin-right: 10px;
+  text-align: center;
+}
+
+.list-item {
+  display: block;
+  width: auto;
+  text-align: right;
+  margin: 20px;
+  color: #087F80;
+}
+
+.list-item .fa {
+  width: 5px;
+  text-decoration: none;
+}
