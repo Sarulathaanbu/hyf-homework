@@ -8,12 +8,11 @@ if (peterHouseCost>peterHousePrice){
 }else{
   console.log('Peter is paying too little');
 }
-
+///////////////////////////////////////////////////////////
 var juliaVolume = 5*11*8;
 var juliaGarden = 70;
 var juliaHouseCost = 1000000;
 var juliaHousePrice = juliaVolume * 2.5 * 1000 + juliaGarden * 300;
-
 if (juliaHouseCost>juliaHousePrice){
   console.log('Julia is paying too much');
 }else{
