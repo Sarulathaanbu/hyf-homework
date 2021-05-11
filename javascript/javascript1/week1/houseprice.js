@@ -1,4 +1,5 @@
 var peterVolume = 8*10*10;
+
 var peterGarden = 100;
 var peterHouseCost = 2500000;
 var peterHousePrice = peterVolume * 2.5 * 1000 + peterGarden * 300;
