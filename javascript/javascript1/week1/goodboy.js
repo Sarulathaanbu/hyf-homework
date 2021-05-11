@@ -1,10 +1,13 @@
-var dogYearOfBirth=2017;
+let dogYearOfBirth = 2017;
 
-var dogYearFuture=2027;
+let dogYearFuture = 2027;
 
-var dogYear=dogYearFuture - dogYearOfBirth;
+let dogYear = dogYearFuture - dogYearOfBirth;
 
-var shouldShowResultInDogYears=dogYear*7;
+if (shouldShowResultInDogYears = true) {
+  let shouldShowResultInDogYears = dogYear * 7;
 
-    console.log(`Your dog will be ${dogYear}human years old in ${dogYearFuture}`);
+  console.log(`Your dog will be ${shouldShowResultInDogYears} years old in ${dogYearFuture}`);
+} else {
+  console.log(`Your dog will be ${dogYear} human years old in ${dogYearFuture}`);
 }
