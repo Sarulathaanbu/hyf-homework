@@ -1,8 +1,8 @@
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-function getEventWeekday(dayList) {
+function getEventWeekday(daysUntilEvent) {
   const today = new Date();
-  const eventWeekDay = (today.getDay() + dayList) % 7;
+  const eventWeekDay = (today.getDay() + daysUntilEvent) % 7;
   return weekDays[eventWeekDay];
 }
 
