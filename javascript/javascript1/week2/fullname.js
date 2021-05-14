@@ -9,10 +9,7 @@ function getFullname(firstName, surName, useFormalName, gender) {
   }
 }
 
-const fullName1 = getFullname("Benjamin", "Hughes", true, "male");
-const fullName2 = getFullname("Saru", "Latha", true, "female");
-const fullName3 = getFullname("Mila", "Andrew");
 
-console.log(fullName1);
-console.log(fullName2);
-console.log(fullName3);
+console.log(getFullname("Benjamin", "Hughes", true, "male"));
+console.log(getFullname("Saru", "Latha", false, "female"));
+console.log(getFullname("Mila", "Andrew"));
