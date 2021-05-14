@@ -1,11 +1,11 @@
 function getFullname(firstName, surName, useFormalName, gender) {
 
   if (useFormalName, gender === "male") {
-    return ("Lord" + " " + firstName + " " + surName);
+    return "Lord" + " " + firstName + " " + surName;
   } else if (useFormalName, gender === "female") {
-    return ("Lady" + " " + firstName + " " + surName);
+    return "Lady" + " " + firstName + " " + surName;
   } else {
-    return (firstName + " " + surName);
+    return firstName + " " + surName;
   }
 }
 
