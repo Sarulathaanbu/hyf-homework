@@ -1,7 +1,7 @@
 const class07Students = [];
 
 function addStudentToClass(studentName) {
-  if (class07Students.length === 6 && studentName !== "Queen Margrethe II") {
+  if (class07Students.length >= 6 && studentName !== "Queen Margrethe II") {
     console.log("Cannot add more students to class 07");
     return;
   }
@@ -25,6 +25,7 @@ addStudentToClass("Mia"); // already in the class
 addStudentToClass("Saru");
 addStudentToClass("Julia");
 addStudentToClass("Dev");
+addStudentToClass("Deva");
 addStudentToClass("Queen Margrethe II"); //Mandatory Queen
 
 console.log(class07Students);
