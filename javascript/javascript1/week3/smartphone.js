@@ -14,18 +14,18 @@ addActivity("22/7-18", "Whatsapp", 50);
 console.log(activities);
 
 ///////////////////////Show my status///////////////////////////////
-let totalDuration = 0;
-
-function showStatus(activities) {
+function showTotalDuration(activities) {
+  let totalDuration = 0;
   for (let i = 0; i < activities.length; i++) {
     totalDuration = totalDuration + activities[i].duration;
   }
-  return totalDuration;
+  console.log(`You have added ${activities.length} activities. They amount to ${totalDuration} min. of usage`);
 }
-totalDuration = showStatus(activities);
-console.log(`You have added ${activities.length} activities. They amount to ${totalDuration} min. of usage`);
+
 
 ////////////////////////Usage limit///////////////////////////
+let totalDuration = showTotalDuration(activities)
+
 function maxLimit(timeLimit) {
   if (totalDuration > timeLimit) {
     console.log("You have reached your limit, no more smartphoning for you!");
@@ -34,7 +34,7 @@ function maxLimit(timeLimit) {
 maxLimit(100);
 
 ////////////////////Total Time Spent On Each Activity/////////////
-function showEachActivity(activityName) {
+function getActivityDuration(activityName) {
   let total = 0;
   for (let i = 0; i < activities.length; i++) {
     if (activities[i].activity === activityName)
@@ -44,4 +44,4 @@ function showEachActivity(activityName) {
   console.log(`You have spent ${total} minutes in total on ${activityName}.`);
 
 }
-showEachActivity("Facebook")
+getActivityDuration("Facebook")

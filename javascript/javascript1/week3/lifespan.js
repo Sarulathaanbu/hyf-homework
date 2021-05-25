@@ -21,10 +21,9 @@ const totalHours = 365.25 * 80 * 24
 
 function logOutSeriesText(seriesDurations) {
   let totalTimeSpend = 0;
-  for (let i = 0; i < seriesDurations.length; i++)
-   {
-    let minutes = (seriesDurations[i].days * 24) + seriesDurations[i].hours + (seriesDurations[i].minutes / 60);
-    let timeSpend = minutes * 100 / totalHours;
+  for (let i = 0; i < seriesDurations.length; i++) {
+    let getHours = (seriesDurations[i].days * 24) + seriesDurations[i].hours + (seriesDurations[i].minutes / 60);
+    let timeSpend = getHours * 100 / totalHours;
     console.log(`${seriesDurations[i].title} took ${timeSpend.toFixed(3)}% of my life`);
     totalTimeSpend = totalTimeSpend + timeSpend;
   }
