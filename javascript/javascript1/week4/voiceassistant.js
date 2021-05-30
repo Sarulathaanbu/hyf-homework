@@ -1,4 +1,5 @@
   let myName = "";
+  let toDo = [];
   ////////////Adding name////////////////////
   function getReply(command) {
 
@@ -12,19 +13,17 @@
       return `Nice to meet you ${myName}`
 
     }
-    if (command == "What is my name?") {
+    if (command.includes("What is my name?")) {
       return `My name is ${myName}`;
     }
 
     /////////////////Today's Date///////////////
-    if (command == "What day is it today?") {
+    if (command.includes("What day is it today?")) {
       return (new Date().toDateString());
     }
-  }
-  ////////////////// ToDoList Exercise////////////////
-  let toDo = [];
 
-  function toDoList(command) {
+    ////////////////// ToDoList Exercise////////////////
+
     const splitString = command.split(" ");
     var str = splitString.slice(0, -3)
     str.shift()
@@ -39,11 +38,12 @@
     if (command.includes("What is on my todo?")) {
       return `you have ${toDo} todos`;
     }
-  }
 
-  ////////////////////Basic Math Operations///////////////////
-  function calculate(firstNumber, secondNumber, operator) {
-
+    ////////////////////Basic Math Operations///////////////////
+    const calculateArray = command.split(" ");
+    const firstNumber = Number(calculateArray[0]);
+    const secondNumber = Number(calculateArray[2]);
+    const operator = calculateArray[1];
     if (operator == "*") {
       return firstNumber * secondNumber;
     }
@@ -56,19 +56,27 @@
     if (operator == "-") {
       return firstNumber - secondNumber;
     }
+
+    ////////////Timer Setup function calling//////////////////////
+    if (command.includes("Set Timer")) {
+      return `Timer set for 4 seconds`
+    }
+    timer()
   }
+
   ////////////Timer Setup//////////////////////
   function timer() {
     console.log(`Timer done`);
   }
   setTimeout(timer, 6000);
-  
-  console.log("Timer set for 1 minute");
+
+
   console.log(getReply("Hello my name is Benjamin")); // "Nice to meet you benjamin"
   console.log(getReply("What is my name?")); // "Your name is Benjamin"
-  console.log(toDoList("Add fishing to my todo"));
-  console.log(toDoList("Add workout to my todo"));
-  console.log(toDoList("Add singing in the shower to my todo"));
-  console.log(toDoList("What is on my todo?"));
-  console.log(toDoList("remove fishing from my todo"));
-  console.log(calculate(29, 20, "-"));
+  console.log(getReply("Add fishing to my todo"));
+  console.log(getReply("Add workout to my todo"));
+  console.log(getReply("Add singing in the shower to my todo"));
+  console.log(getReply("What is on my todo?"));
+  console.log(getReply("remove fishing from my todo"));
+  console.log(getReply("8 * 5"));
+  console.log(getReply("Set Timer"));
