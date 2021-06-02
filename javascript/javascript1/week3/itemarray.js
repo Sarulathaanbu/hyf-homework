@@ -10,6 +10,10 @@ const names = [
 ];
 const nameToRemove = "Ahmad";
 
+
 names.splice(names.indexOf(nameToRemove), 1);
+
+
+names.splice(1, 1);
 
 console.log(names);
