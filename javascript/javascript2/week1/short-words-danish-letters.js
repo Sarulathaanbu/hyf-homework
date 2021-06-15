@@ -1,15 +1,15 @@
 const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
 
-function shortWord(array) {
+function getShortestWord(array) {
   return array.reduce(function(prevWord, currWord) {
     if (currWord.length < prevWord.length) {
       return currWord;
-    } else
-      return prevWord;
+    }
+    return prevWord;
   })
 }
 
-console.log(shortWord(danishWords));
+console.log(getShortestWord(danishWords));
 
 //////////////////////////Finding Danish Letters/////////////////////
 
@@ -19,7 +19,7 @@ function findDanishLetters(danishString) {
   const å = danishString.match(/å/g);
   const æ = danishString.match(/æ/g);
   const ø = danishString.match(/ø/g);
-  let total = æ.length + å.length + ø.length;
+  const total = æ.length + å.length + ø.length;
   return `total: ${total}, æ: ${æ.length}, ø: ${ø.length}, ${å.length}: 1`;
 }
 console.log(findDanishLetters("Blå grød med røde bær"));

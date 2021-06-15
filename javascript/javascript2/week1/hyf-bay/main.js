@@ -11,8 +11,8 @@ function renderProducts(products) {
 
   for (let i = 0; i < products.length; i++) {
     const li = document.createElement('li')
-    const name = document.createElement('h1')
-    name.innerHTML = products[i].name
+    const nameHeader = document.createElement('h1')
+    nameHeader.innerHTML = products[i].name
     li.appendChild(name)
 
     const price = document.createElement('p')

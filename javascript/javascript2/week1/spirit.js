@@ -11,14 +11,14 @@ const spiritAnimal = ['The crying butterfly',
 ]
 
 
-function spiritNamesGenerator(name) {
+function generateSpiritName(name) {
   return `${name} - ${spiritAnimal [parseInt(Math.random()*10)]}`
 }
 
 function clickButtons() {
   const getName = document.getElementById('name').value;
   if (getName !== '') {
-    spiritName.innerHTML = spiritNamesGenerator(getName);
+    spiritName.innerHTML = generateSpiritName(getName);
   } else {
     spiritName.innerHTML = 'Please write a name';
   }
@@ -27,7 +27,7 @@ function clickButtons() {
 function mouseOver() {
   const getName = document.getElementById('name').value;
   if (getName !== '') {
-    spiritName.innerHTML = spiritNamesGenerator(getName);
+    spiritName.innerHTML = generateSpiritName(getName);
   } else {
     spiritName.innerHTML = 'Please provide a name';
   }
@@ -39,4 +39,4 @@ const hoverButton = document.querySelector('.hoverbutton');
 const spiritName = document.querySelector('h2');
 
 clickButton.addEventListener('click', clickButtons)
-hoverButton.addEventListener('click', mouseOver)
+hoverButton.addEventListener('mouseOver', mouseOver)
