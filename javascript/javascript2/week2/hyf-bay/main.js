@@ -6,12 +6,12 @@ console.log(productsUl);
 
 function renderProducts(products) {
   products.forEach(product => {
-    const li = document.createElement('li');
+    const productLi = document.createElement('li');
 
     let shipsToHTML = '';
     product.shipsTo.forEach(country => shipsToHTML += `<li>${country}</li>`);
 
-    li.innerHTML =
+    productLi.innerHTML =
       `
             <ul>
                 <li>${product.name}</li>
@@ -20,7 +20,7 @@ function renderProducts(products) {
                 <ul class="ships-to">${shipsToHTML}</ul>
             </ul>
         `;
-    productsUl.appendChild(li);
+    productsUl.appendChild(productLi);
   });
 }
 
