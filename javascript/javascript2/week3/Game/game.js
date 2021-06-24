@@ -10,7 +10,7 @@ let lCount = 0;
 
 const startGame = () => {
 
-  if (sCount == lCount) {
+  if (sCount === lCount) {
     getResult.innerHTML = "Game Draw!!!";
   }
   if (sCount > lCount) {
@@ -24,12 +24,12 @@ startButton.addEventListener("click", gameStart);
 
 function gameStart() {
   let getTime = input.value;
-  if (getTime == "") {
+  if (getTime === "") {
     getAlert.innerHTML = "Please enter time!!";
     document.removeEventListener("keydown", keyPressFunc);
-  }
+  } else
 
-  setTimeout(() => {
+    setTimeout(() => {
     document.removeEventListener("keydown", keyPressFunc);
     getAlert.innerHTML = "Game Over!!";
     startGame();
@@ -39,11 +39,11 @@ function gameStart() {
 
   function keyPressFunc(event) {
     let userKey = event.key;
-    if (userKey == "s") {
+    if (userKey === "s") {
       sCount++;
       sKey.innerHTML = sCount;
     }
-    if (userKey == "l") {
+    if (userKey === "l") {
       lCount++;
       lKey.innerHTML = lCount;
     }
