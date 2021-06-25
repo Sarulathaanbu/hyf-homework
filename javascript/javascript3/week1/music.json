@@ -1,0 +1,28 @@
+{
+  "music-instruments": [{
+    "name": "guitar",
+    "id": 1,
+    "Price": {
+      "currency": "dkk",
+      "amount": 5000
+    },
+    "category": "western"
+  }, {
+    "name": "drums",
+    "id": 2,
+    "Price": {
+      "currency": "dkk",
+      "amount": 10000
+    },
+    "category": "folk"
+  }, {
+    "name": "piano",
+    "id": 3,
+    "Price": {
+      "currency": "dkk",
+      "amount": 8000
+    },
+    "category": "melody"
+  }]
+
+}
