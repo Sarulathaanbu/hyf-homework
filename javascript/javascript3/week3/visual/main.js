@@ -19,7 +19,7 @@ translateOneByOne()
 
 
 function translateAllAtOnce() {
-  Promise.all(moveElement(document.querySelector("#red-circle"), {
+  Promise.all([moveElement(document.querySelector("#red-circle"), {
     x: 20,
     y: 300
   }), moveElement(document.querySelector("#blue-circle"), {
@@ -28,7 +28,7 @@ function translateAllAtOnce() {
   }), moveElement(document.querySelector("#green-circle"), {
     x: 400,
     y: 20
-  }))
-  console.log('All Elements moved')
-}
+  })]).then(() =>
+    console.log('All Elements moved')
+  })
 translateAllAtOnce()

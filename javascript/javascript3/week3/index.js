@@ -6,7 +6,7 @@ fetch(
   )
   .then((moviesResponse) => moviesResponse.json())
   .then(data => {
-    const getBadMovies = data.filter(m => m.rating < 6)
+    const getBadMovies = data.filter(it => it.rating < 6)
       //.map(m => m.title);
     const getBadMoviesSince2000 = getBadMovies.filter(mov => mov.year > 2000)
       .map(mov => mov.title);
