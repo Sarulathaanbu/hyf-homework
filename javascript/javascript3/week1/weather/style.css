@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+  }
+h1{
+  font-size: 45px;
+  font-style: bold;
+}
+  #btn{
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    background-color:brown ;
+  }
+#city-name{
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+}
+#errorMsg,.weather{
+  font-size: 40px;
+}
