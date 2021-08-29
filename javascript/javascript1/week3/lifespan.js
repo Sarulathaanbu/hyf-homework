@@ -17,6 +17,21 @@ const seriesDurations = [{
     minutes: 0,
   },
 ];
+
+const totalHours = 365.25 * 80 * 24
+
+function logOutSeriesText(seriesDurations) {
+  let totalTimeSpend = 0;
+  for (let i = 0; i < seriesDurations.length; i++) {
+    let getHours = (seriesDurations[i].days * 24) + seriesDurations[i].hours + (seriesDurations[i].minutes / 60);
+    let timeSpend = getHours * 100 / totalHours;
+    console.log(`${seriesDurations[i].title} took ${timeSpend.toFixed(3)}% of my life`);
+    totalTimeSpend = totalTimeSpend + timeSpend;
+  }
+  console.log(`In total that is ${totalTimeSpend.toFixed(3)}% of my life `)
+}
+logOutSeriesText(seriesDurations);
+
 const totalTimeInLife = 365 * 24 * 80
 let totalTimeSeries = 0;
 
@@ -31,3 +46,4 @@ function calDuration(seriesDurations) {
 }
 console.log(`In total of 80 years lifespan, the amount of time spent is ${totalTimeSeries}% `)
 calDuration(seriesDurations);
+
