@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 
+
 app.get("/", (req, res) => res.send("nodejs week3 homework"));
 app.get("/calculator/:operation", (req, res) => {
   const operation = req.params.operation
