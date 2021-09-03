@@ -26,7 +26,6 @@ app.get("/calculator/:operation", (req, res) => {
     }
 });
 
-
 app.post("/calculator/:operation", async(req, res) => {
     const operation = req.params.operation
     let values = Object.values(req.body).flat().map(n => Number(n));
