@@ -10,7 +10,7 @@ function ToDoTable(props) {
     <h1>ToDo List:</h1>
     <ul>
       {todos.map((todo) => {
-        return <ToDo description={todo.description} endDate={todo.endDate} />;
+        return <ToDo  key={todo.id} description={todo.description} endDate={todo.endDate} />;
       })}
     </ul>
   </div>;
